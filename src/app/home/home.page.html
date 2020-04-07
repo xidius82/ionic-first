@@ -1,20 +1,38 @@
-<ion-header [translucent]="true">
+<ion-header >
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>
       Blank
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content padding>
+  <!-- <ion-button (click)="presentAlert()" size="large"> 
+    Alert Action
+  </ion-button>
+  <ion-button (click)="presentLoadingWithOptions()" size="large"> 
+    Loading Action
+  </ion-button>
+  <ion-item>
+    <ion-label>
+      Date
+    </ion-label>
+    <ion-datetime min="2015" max="2220-10-31" display-format="MMM DD, YYYY" picker-format="MMMM YYYY"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">
+      Floating Label
+    </ion-label>
+    <ion-input type="number"> </ion-input>
+  </ion-item> -->
+  <!-- <ion-button (click)="getRequest()">Get</ion-button>
+  {{requestObject | json }}
+  <ion-button (click)="sendSms()">Send</ion-button> -->
+  <ion-button expand="full" (click)="openDetailWithQueryParams()">Open Details with query params</ion-button>
+<ion-button expand="full" (click)="openDetailWithService()">Open Details with service</ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button expand="full" (click)="openDetailWithState()">Open Details with state</ion-button>
 </ion-content>

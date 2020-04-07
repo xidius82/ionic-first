@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { HTTP } from '@ionic-native/http/ngx';
+import { SMS } from '@ionic-native/sms/ngx';
 
 @NgModule({
   imports: [
@@ -18,6 +20,7 @@ import { HomePage } from './home.page';
       }
     ])
   ],
+  providers: [HTTP,SMS],
   declarations: [HomePage]
 })
 export class HomePageModule {}
